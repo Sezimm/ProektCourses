@@ -1,0 +1,21 @@
+{% extends 'IT_courses/layout.html' %}
+
+
+{% block title %}IT courses{% endblock %}
+
+
+{% block content %}
+    <div class="features">
+        <h1>Информация о Курсах</h1>
+
+        {% for item in prog %}
+            <div class="alert alert-warning">
+                <h3>{{ item.title }}</h3>
+                <p>Продолжительность курса: {{ item.period }}
+                    <br>Цена за полный курс: {{ item.price_all }}
+                    <br>Цена за месяц: {{ item.price_month }}</p>
+            </div>
+        {% endfor %}
+
+    </div>
+{% endblock %}
